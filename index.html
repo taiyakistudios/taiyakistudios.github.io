@@ -20,22 +20,70 @@
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
+  <style>
+    body,
+    html {
+      height: 100%;
+    }
+
+    .bg {
+      /* The image used */
+      background-image: url("./img/logo.svg");
+
+      /* Full height */
+      height: 80%;
+      margin-left: 20%;
+      margin-right: 20%;
+
+      /* Center and scale the image nicely */
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .email {
+      font-family: adobe-garamond-pro;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: 0em;
+      text-transform: none;
+      line-height: 1.6em;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      font-size: calc((1.2 - 1) * 1.2vw + 1rem);
+      text-align: center;
+    }
+
+    @media (min-width : 500px) {
+      .email {
+        position: relative;
+        top: 80%;
+        float: right;
+        margin-right: 15%;
+      }
+    }
+
+    @media (max-width : 499px) {
+      .email {
+        position: relative;
+        top: 80%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <!--  <img height="100%" src="./img/logo.svg" alt="Taiyaki logo"> -->
+  <div class="bg">
+    <p class="email">contact@taiyakistudios.com</p>
+  </div>
+  <!-- Add your site or application content here
+  <p>Hello world! This is HTML5 Boilerplate.</p> -->
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
 
 </html>
