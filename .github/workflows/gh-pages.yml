@@ -24,6 +24,9 @@ jobs:
 
       - name: Build
         run: cd blog && hugo --minify
+      
+      - name: Copy index
+        run: cp ./homepage/* ./blog/public
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
