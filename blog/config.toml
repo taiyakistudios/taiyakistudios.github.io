@@ -1,0 +1,4 @@
+baseURL = 'http://taiyakistudios.com/'
+languageCode = 'en-us'
+title = 'Taiyaki Studios'
+theme = "ananke"
