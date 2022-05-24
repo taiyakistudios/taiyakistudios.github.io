@@ -1,89 +1,172 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+    <!-- Place favicon.ico in the root directory -->
 
-  <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cloud.typography.com/8003020/6925432/css/fonts.css"
+    />
 
-  <meta name="theme-color" content="#fafafa">
-  <style>
-    body,
-    html {
-      height: 100%;
-    }
-
-    .bg {
-      /* The image used */
-      background-image: url("./logo.svg");
-
-      /* Full height */
-      height: 80%;
-      margin-left: 20%;
-      margin-right: 20%;
-
-      /* Center and scale the image nicely */
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
-    .email {
-      font-family: adobe-garamond-pro;
-      font-weight: 400;
-      font-style: normal;
-      letter-spacing: 0em;
-      text-transform: none;
-      line-height: 1.6em;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      font-size: calc((1.2 - 1) * 1.2vw + 1rem);
-      text-align: center;
-    }
-
-    /*
-    @media (min-width : 500px) {
-      .email {
-        position: relative;
-        top: 80%;
-        float: right;
-        margin-right: 15%;
+    <meta name="theme-color" content="#fafafa" />
+    <style>
+      body,
+      html {
+        height: 100%;
       }
-    }
 
-    @media (max-width : 499px) {
-      .email {
-        position: relative;
-        top: 80%;
+      body {
+        margin: 0;
+        color: #1a1a1a;
+        font-size: 16px;
+        font-family: "Decimal A", "Decimal B";
       }
-    }
-    */
-  </style>
-</head>
 
-<body>
+      /* .wrapper {
+        max-width: 90%;
+        max-width: calc(100vw - 120px);
+        margin: 0 auto;
+      } */
 
-  <!--  <img height="100%" src="./img/logo.svg" alt="Taiyaki logo"> -->
-  <div class="bg">
-  </div>
-  <p class="email">contact@taiyakistudios.com</p>
-  <!-- Add your site or application content here
-  <p>Hello world! This is HTML5 Boilerplate.</p> -->
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+      .header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        padding: 40px 0;
+      }
+      .header__wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 90%;
+      }
+      .header__logo {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        user-select: none;
+      }
+      .header__social {
+        display: flex;
+        gap: 20px;
+      }
 
-</body>
+      .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 10px;
+        font-size: 14px;
+        font-weight: 500;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 100px;
+      }
 
+      .logo__symbol {
+      }
+      .logo__text {
+        font-size: 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .primary {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        min-height: 500px;
+        padding: 100px 0;
+        margin: 0 auto;
+        max-width: 600px;
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .primary__title {
+        margin: 0;
+        font-size: 48px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+      }
+      .primary__text {
+        margin: 0;
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1.6;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        padding: 40px 0;
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.6);
+      }
+      .footer__wrapper {
+        max-width: 90%;
+      }
+
+      /*
+      @media (max-width: 1280px) {
+      }
+      */
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <img class="logo__symbol" src="./logo.svg" alt="Taiyaki logo" />
+            <div class="logo__text">Taiyaki</div>
+          </div>
+          <div class="header__social">
+            <div class="social social--discord">Discord</div>
+            <div class="social social--twitter">Twitter</div>
+          </div>
+        </div>
+      </header>
+
+      <section class="primary">
+        <h1 class="primary__title">Empowering creators and communities</h1>
+        <p class="primary__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit proin id
+          blandit luctus molestie.
+        </p>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__wrapper">&copy; Taiyaki Studios</div>
+      </footer>
+    </div>
+
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
