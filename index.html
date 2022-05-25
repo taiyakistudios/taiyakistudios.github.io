@@ -57,7 +57,11 @@
       .wrapper {
         position: relative;
         width: 100%;
-        height: 100%;
+        height: 100%; /* Fallback */
+        height: -moz-available;
+        height: -webkit-fill-available;
+        height: fill-available;
+        height: stretch; /* Latest specification */
       }
 
       .header {
@@ -247,7 +251,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        position: fixed;
+        position: absolute;
         bottom: 0;
         padding: 40px 0;
         text-align: center;
@@ -271,7 +275,7 @@
       .bg {
         width: 80%;
         height: 230px;
-        position: fixed;
+        position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
