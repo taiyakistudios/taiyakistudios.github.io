@@ -236,7 +236,7 @@
         transform-origin: center center;
       }
       .form__status div {
-        margin-top: 20px;
+        margin-top: 10px;
         width: 100%;
         padding: 15px;
         font-size: 16px;
@@ -270,6 +270,10 @@
       }
 
       .bg {
+        background: url("bg.png") no-repeat center bottom / contain;
+      }
+      .bg--desktop {
+        display: none;
         width: 80%;
         height: 230px;
         position: absolute;
@@ -279,6 +283,12 @@
         margin: 0 auto;
         z-index: -1;
         background: url("bg.png") no-repeat center bottom / contain;
+      }
+      .bg--mobile {
+        width: 90%;
+        height: 200px;
+        margin-bottom: 40px;
+        background: url("bg_mobile.png") no-repeat center bottom / contain;
       }
 
       @media (min-width: 768px) {
@@ -325,6 +335,12 @@
         .form__elements {
           flex-direction: row;
         }
+        .form__input,
+        .form__button {
+          height: 50px;
+          padding: 15px;
+          font-size: 18px;
+        }
         .form__input {
           border-right: 0;
           border-radius: 10px 0 0 10px;
@@ -333,12 +349,15 @@
           margin: 0;
           border-radius: 0 10px 10px 0;
         }
+        .form__status div {
+          margin-top: 20px;
+        }
 
-        .form__input,
-        .form__button {
-          height: 50px;
-          padding: 15px;
-          font-size: 18px;
+        .bg--mobile {
+          display: none;
+        }
+        .bg--desktop {
+          display: block;
         }
       }
 
@@ -390,6 +409,8 @@
       </header>
 
       <section class="primary">
+        <div class="bg bg--mobile"></div>
+
         <h1 class="primary__title">Start creating with a custom&nbsp;avatar</h1>
         <p class="primary__text">
           Become a virtual celebrity on Tiktok, Twitch, or YouTube with a custom
@@ -422,7 +443,7 @@
         </div>
       </footer>
 
-      <div class="bg"></div>
+      <div class="bg bg--desktop"></div>
     </div>
 
     <!-- <script src="js/vendor/modernizr-3.11.2.min.js"></script> -->
