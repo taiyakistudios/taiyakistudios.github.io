@@ -314,9 +314,15 @@
             <!-- <a class="social social--discord" href="#">Discord</a> -->
             <a
               class="social social--twitter"
-              href="https://twitter.com/taiyakistudios"
+              href="https://twitter.com/taiyaki_studios"
               target="_blank"
-              >Twitter</a
+              >Follow us on Twitter</a
+            >
+            <a
+              class="social social--twitter"
+              href="https://taiyakistudios.notion.site/Taiyaki-Studios-Hiring-f53bde7f7d43427bab1672cb6d538b7b"
+              target="_blank"
+              >We're hiring!</a
             >
           </div>
         </div>
@@ -360,6 +366,10 @@
     <!-- <script src="js/main.js"></script> -->
 
     <script>
+      var messages = {
+        success: "Thanks for joining the waitlist!",
+        failure: "Oops! There was a problem submitting your form",
+      };
       var form = document.querySelector(".form");
 
       async function handleSubmit(event) {
@@ -376,7 +386,7 @@
         })
           .then((response) => {
             if (response.ok) {
-              status.innerHTML = "<div>Thanks for your submission!</div>";
+              status.innerHTML = `<div>${messages.success}</div>`;
               form.reset();
             } else {
               response.json().then((data) => {
@@ -385,15 +395,13 @@
                     .map((error) => error["message"])
                     .join(", ");
                 } else {
-                  status.innerHTML =
-                    "<div>Oops! There was a problem submitting your form</div>";
+                  status.innerHTML = `<div>${messages.success}</div>`;
                 }
               });
             }
           })
           .catch((error) => {
-            status.innerHTML =
-              "<div>Oops! There was a problem submitting your form</div>";
+            status.innerHTML = `<div>${messages.failure}</div>`;
           });
       }
       form.addEventListener("submit", handleSubmit);
