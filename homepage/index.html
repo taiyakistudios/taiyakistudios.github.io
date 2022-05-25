@@ -248,13 +248,33 @@
         position: absolute;
         bottom: 0;
         padding: 40px 0;
-        font-size: 12px;
         text-align: center;
         text-transform: uppercase;
         color: rgba(0, 0, 0, 0.6);
       }
       .footer__wrapper {
         max-width: 85%;
+      }
+      .footer__copyright {
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        color: rgba(0, 0, 0, 0.8);
+        background: rgba(255, 255, 255, 0.2);
+        padding: 10px 20px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+      }
+      .bg {
+        width: 80%;
+        height: 230px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: -1;
+        background: url("bg.png") no-repeat center bottom / contain;
       }
 
       @media (min-width: 768px) {
@@ -280,7 +300,7 @@
           max-width: 700px;
           height: 100vh;
           min-height: 600px;
-          padding: 100px 0;
+          padding: 100px 0 150px 0;
         }
         .primary__title {
           font-size: 48px;
@@ -381,8 +401,12 @@
       </section>
 
       <footer class="footer">
-        <div class="footer__wrapper">&copy; Taiyaki Studios</div>
+        <div class="footer__wrapper">
+          <div class="footer__copyright">&copy; Taiyaki Studios</div>
+        </div>
       </footer>
+
+      <div class="bg"></div>
     </div>
 
     <!-- <script src="js/vendor/modernizr-3.11.2.min.js"></script> -->
