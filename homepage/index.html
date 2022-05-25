@@ -1,89 +1,410 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Taiyaki Studios</title>
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Place favicon.ico in the root directory -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+    <!-- <link rel="stylesheet" href="css/main.css" /> -->
 
-  <meta name="theme-color" content="#fafafa">
-  <style>
-    body,
-    html {
-      height: 100%;
-    }
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cloud.typography.com/8003020/6925432/css/fonts.css"
+    />
 
-    .bg {
-      /* The image used */
-      background-image: url("./logo.svg");
-
-      /* Full height */
-      height: 80%;
-      margin-left: 20%;
-      margin-right: 20%;
-
-      /* Center and scale the image nicely */
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
-    .email {
-      font-family: adobe-garamond-pro;
-      font-weight: 400;
-      font-style: normal;
-      letter-spacing: 0em;
-      text-transform: none;
-      line-height: 1.6em;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      font-size: calc((1.2 - 1) * 1.2vw + 1rem);
-      text-align: center;
-    }
-
-    /*
-    @media (min-width : 500px) {
-      .email {
-        position: relative;
-        top: 80%;
-        float: right;
-        margin-right: 15%;
+    <style>
+      :root {
+        --primary-font-family: "Decimal A", "Decimal B", system-ui,
+          -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       }
-    }
 
-    @media (max-width : 499px) {
-      .email {
-        position: relative;
-        top: 80%;
+      * {
+        box-sizing: border-box;
       }
-    }
-    */
-  </style>
-</head>
 
-<body>
+      body,
+      html {
+        height: 100%;
+      }
 
-  <!--  <img height="100%" src="./img/logo.svg" alt="Taiyaki logo"> -->
-  <div class="bg">
-  </div>
-  <p class="email">contact@taiyakistudios.com</p>
-  <!-- Add your site or application content here
-  <p>Hello world! This is HTML5 Boilerplate.</p> -->
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+      html {
+        scroll-behavior: smooth;
+      }
 
-</body>
+      body {
+        margin: 0;
+        color: #1a1a1a;
+        font-size: 16px;
+        font-family: var(--primary-font-family);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
 
+      .wrapper {
+        position: relative;
+      }
+
+      .header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        padding: 40px 0;
+      }
+      .header__wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 85%;
+      }
+      .header__logo {
+        display: flex;
+        align-items: center;
+        user-select: none;
+      }
+      .header__social {
+        display: flex;
+        gap: 10px;
+      }
+
+      .logo__symbol {
+        width: 24px;
+        margin-right: 15px;
+      }
+      .logo__symbol svg {
+        width: 100%;
+        height: auto;
+      }
+      .logo__text {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+      .logo__text--small {
+        display: block;
+        font-weight: 300;
+        color: rgba(0, 0, 0, 0.4);
+      }
+
+      .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 10px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1;
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 100px;
+        transition: 0.4s all;
+      }
+      .social:hover {
+        color: rgba(255, 255, 255, 1);
+        background: rgba(0, 0, 0, 0.8);
+        /* transform: scale(1.1); */
+        transition: 0.2s all;
+      }
+
+      .primary {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 85%;
+        height: 100vh;
+        padding: 100px 0;
+        margin: 0 auto;
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .primary__title {
+        margin: 0;
+        color: #1a1a1a;
+        font-size: 32px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .primary__text {
+        margin: 0;
+        margin-top: 15px;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.6;
+      }
+      .primary__form {
+        margin-top: 20px;
+      }
+      .form__elements {
+        display: flex;
+        flex-direction: column;
+      }
+      .form__input,
+      .form__button {
+        height: 40px;
+        padding: 10px 15px;
+        font-size: 16px;
+        line-height: 1;
+        font-family: var(--primary-font-family);
+      }
+      .form__input {
+        font-weight: 300;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        transition: 0.8s all;
+      }
+      .form__input:focus {
+        outline: none;
+        border-color: rgba(0, 0, 0, 0.4);
+        transition: 0.4s all;
+      }
+      .form__button {
+        position: relative;
+        overflow: hidden;
+        margin-top: 10px;
+        background: #ff000f;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 600;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        transition: 0.8s all;
+      }
+      .form__button span {
+        position: relative;
+        /* mix-blend-mode: difference; */
+      }
+      .form__button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #1a1a1a;
+        width: 140%;
+        left: -20%;
+        transform: skew(45deg);
+        transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+      }
+      .form__button:hover::before {
+        transform: translate3d(100%, 0, 0);
+      }
+      .form__button:focus {
+        transform: scale(1.05);
+        transform-origin: center center;
+      }
+      .form__button:focus {
+        transform: scale(1.05);
+        transform-origin: center center;
+      }
+      .form__status div {
+        margin-top: 20px;
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+      /* .form__button:hover {
+        background: #ff4c1f;
+        transition: 0.4s all;
+      } */
+
+      .footer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        padding: 40px 0;
+        font-size: 12px;
+        text-align: center;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.6);
+      }
+      .footer__wrapper {
+        max-width: 85%;
+      }
+
+      @media (min-width: 768px) {
+        .header {
+          width: 100%;
+          padding: 40px 0;
+        }
+        .header__wrapper {
+          width: 100%;
+          max-width: 85%;
+        }
+        .logo__symbol {
+          width: 28px;
+          margin-right: 15px;
+        }
+        .logo__text {
+          font-size: 21px;
+        }
+        .logo__text--small {
+          display: inline;
+        }
+        .primary {
+          max-width: 700px;
+          height: 100vh;
+          min-height: 600px;
+          padding: 100px 0;
+        }
+        .primary__title {
+          font-size: 48px;
+        }
+        .primary__text {
+          margin-top: 20px;
+          font-size: 24px;
+        }
+        .primary__form {
+          margin-top: 35px;
+        }
+        .form__elements {
+          flex-direction: row;
+        }
+        .form__input {
+          border-right: 0;
+          border-radius: 10px 0 0 10px;
+        }
+        .form__button {
+          margin: 0;
+          border-radius: 0 10px 10px 0;
+        }
+
+        .form__input,
+        .form__button {
+          height: 50px;
+          padding: 15px;
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <img class="logo__symbol" src="./logo.svg" alt="Taiyaki logo" />
+            <div class="logo__text">
+              Taiyaki <span class="logo__text--small">Studios</span>
+            </div>
+          </div>
+          <div class="header__social">
+            <!-- <a class="social social--discord" href="#">Discord</a> -->
+            <a
+              class="social social--twitter"
+              href="https://twitter.com/taiyaki_studios"
+              target="_blank"
+              >Follow us on Twitter</a
+            >
+            <a
+              class="social social--twitter"
+              href="https://taiyakistudios.notion.site/Taiyaki-Studios-Hiring-f53bde7f7d43427bab1672cb6d538b7b"
+              target="_blank"
+              >We're hiring!</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <section class="primary">
+        <h1 class="primary__title">Start creating with a custom&nbsp;avatar</h1>
+        <p class="primary__text">
+          Become a virtual celebrity on Tiktok, Twitch, or Youtube with a custom
+          avatar from Taiyaki&nbsp;Studios.
+        </p>
+        <form
+          class="primary__form form"
+          action="https://formspree.io/f/mzbooear"
+          method="POST"
+        >
+          <div class="form__elements">
+            <input
+              class="form__input"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              required
+            />
+            <button class="form__button" type="submit">
+              <span>Join the waitlist</span>
+            </button>
+          </div>
+          <div class="form__status"></div>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__wrapper">&copy; Taiyaki Studios</div>
+      </footer>
+    </div>
+
+    <!-- <script src="js/vendor/modernizr-3.11.2.min.js"></script> -->
+    <!-- <script src="js/vendor/gsap.min.js"></script> -->
+    <!-- <script src="js/plugins.js"></script> -->
+    <!-- <script src="js/main.js"></script> -->
+
+    <script>
+      var messages = {
+        success: "Thanks for joining the waitlist!",
+        failure: "Oops! There was a problem submitting your form",
+      };
+      var form = document.querySelector(".form");
+
+      async function handleSubmit(event) {
+        event.preventDefault();
+
+        var status = document.querySelector(".form__status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              status.innerHTML = `<div>${messages.success}</div>`;
+              form.reset();
+            } else {
+              response.json().then((data) => {
+                if (Object.hasOwn(data, "errors")) {
+                  status.innerHTML = data["errors"]
+                    .map((error) => error["message"])
+                    .join(", ");
+                } else {
+                  status.innerHTML = `<div>${messages.success}</div>`;
+                }
+              });
+            }
+          })
+          .catch((error) => {
+            status.innerHTML = `<div>${messages.failure}</div>`;
+          });
+      }
+      form.addEventListener("submit", handleSubmit);
+    </script>
+  </body>
 </html>
