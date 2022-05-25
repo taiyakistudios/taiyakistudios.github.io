@@ -52,6 +52,10 @@
         -moz-osx-font-smoothing: grayscale;
       }
 
+      .wrapper {
+        position: relative;
+      }
+
       .header {
         display: flex;
         justify-content: center;
@@ -125,6 +129,7 @@
       }
       .primary__title {
         margin: 0;
+        color: #1a1a1a;
         font-size: 36px;
         font-weight: 800;
         letter-spacing: -0.01em;
@@ -150,12 +155,16 @@
         font-family: var(--primary-font-family);
       }
       .form__input {
+        font-weight: 300;
         border: 1px solid rgba(0, 0, 0, 0.1);
         border-right: 0;
+        border-radius: 10px 0 0 10px;
+        transition: .8s all;
       }
       .form__input:focus {
         outline: none;
         border-color: rgba(0, 0, 0, 0.2);
+        transition: .4s all;
       }
       .form__button {
         color: rgba(255, 255, 255, 1);
@@ -165,10 +174,43 @@
         cursor: pointer;
         transition: 0.8s all;
       }
-      .form__button:hover {
+
+      .form__button {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0 10px 10px 0;
+      }
+      .form__button span {
+      	position: relative;
+      	/* mix-blend-mode: difference; */
+      }
+      .form__button::before {
+      	content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      	background: #1a1a1a;
+        width: 140%;
+        left: -20%;
+      	transform: skew(45deg);
+      	transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+      }
+      .form__button:hover::before {
+      	transform: translate3d(100%,0,0);
+      }
+      .form__button:focus {
+      	transform: scale(1.05);
+        transform-origin: center center;
+      }
+      .form__button:focus {
+      	transform: scale(1.05);
+        transform-origin: center center;
+      }
+      /* .form__button:hover {
         background: #ff4c1f;
         transition: 0.4s all;
-      }
+      } */
 
       .footer {
         display: flex;
@@ -177,7 +219,7 @@
         position: absolute;
         bottom: 0;
         padding: 40px 0;
-        font-size: 14px;
+        font-size: 12px;
         text-align: center;
         text-transform: uppercase;
         color: rgba(0, 0, 0, 0.6);
@@ -196,7 +238,7 @@
           max-width: 90%;
         }
         .logo__text {
-          font-size: 24px;
+          font-size: 21px;
         }
         .primary {
           max-width: 700px;
@@ -240,25 +282,33 @@
             </div>
           </div>
           <div class="header__social">
-            <a class="social social--discord" href="#">Discord</a>
-            <a class="social social--twitter" href="#">Twitter</a>
+            <!-- <a class="social social--discord" href="#">Discord</a> -->
+            <a
+              class="social social--twitter"
+              href="https://twitter.com/taiyakistudios"
+              target="_blank"
+              >Twitter</a
+            >
           </div>
         </div>
       </header>
 
       <section class="primary">
-        <h1 class="primary__title">Start creating with a custom avatar</h1>
+        <h1 class="primary__title">Start creating with a custom&nbsp;avatar</h1>
         <p class="primary__text">
           Become a virtual celebrity on Tiktok, Twitch, or Youtube with a custom
-          avatar from Taiyaki Studios.
+          avatar from Taiyaki&nbsp;Studios.
         </p>
         <form class="primary__form form">
           <input
             class="form__input"
-            type="text"
+            type="email"
             placeholder="Enter your email"
+            required
           />
-          <button class="form__button" type="submit">Join the waitlist</button>
+          <button class="form__button" type="submit">
+            <span>Join the waitlist</span>
+          </button>
         </form>
       </section>
 
