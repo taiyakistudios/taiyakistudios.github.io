@@ -257,13 +257,17 @@
         position: absolute;
         bottom: 0;
         z-index: 0;
-        padding: 40px 0;
+        /* padding: 40px 0; */
+        height: 50px;
         text-align: center;
         text-transform: uppercase;
         color: rgba(0, 0, 0, 0.6);
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
       }
       .footer__wrapper {
         max-width: 85%;
+        display: flex;
+        align-items: center;
       }
       .footer__copyright {
         font-size: 12px;
@@ -293,7 +297,7 @@
       }
       .bg--mobile {
         width: 90%;
-        height: 200px;
+        height: 150px;
         margin-bottom: 20px;
         background: url("bg_mobile.png") no-repeat center bottom / contain;
       }
