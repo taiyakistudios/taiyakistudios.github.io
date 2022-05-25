@@ -64,9 +64,11 @@
         top: 0;
         padding: 40px 0;
       }
+
       .header__wrapper {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
         max-width: 85%;
       }
@@ -95,13 +97,14 @@
         text-transform: uppercase;
       }
       .logo__text--small {
-        display: block;
         font-weight: 300;
         color: rgba(0, 0, 0, 0.4);
       }
 
       .social {
+        margin-top: 20px;
         display: flex;
+        gap: 5px;
         justify-content: center;
         align-items: center;
         padding: 5px 15px;
@@ -123,7 +126,6 @@
         margin-top: 1px;
         width: 14px;
         height: auto;
-        margin-right: 5px;
       }
       .social svg path {
         fill: rgba(0, 0, 0, 0.8);
@@ -260,10 +262,11 @@
         font-weight: 400;
         letter-spacing: 0.1em;
         color: rgba(0, 0, 0, 0.8);
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.5);
         padding: 10px 20px;
         border-radius: 20px;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
       }
       .bg {
         width: 80%;
@@ -283,6 +286,8 @@
           padding: 40px 0;
         }
         .header__wrapper {
+          flex-direction: row;
+          justify-content: space-between;
           width: 100%;
           max-width: 85%;
         }
@@ -296,6 +301,11 @@
         .logo__text--small {
           display: inline;
         }
+
+        .social {
+          margin: 0;
+        }
+
         .primary {
           max-width: 700px;
           height: 100vh;
@@ -331,6 +341,12 @@
           font-size: 18px;
         }
       }
+
+      @media (max-width: 768px) {
+        .hide-on-mobile {
+          display: none;
+        }
+      }
     </style>
   </head>
 
@@ -360,7 +376,7 @@
                   fill="#464646"
                 />
               </svg>
-              Twitter
+              <span class="">Twitter</span>
             </a>
             <a
               class="social social--twitter"
