@@ -1,5 +1,4 @@
-function init(){
-  gsap.timeline()
+gsap.timeline()
   .to("body", { overflow: "hidden" })
   .from(
     ".header",
@@ -59,6 +58,3 @@ function init(){
     0.8
   )
   .to("body", { overflow: "" });
-}
-
-window.addEventListener("load", init)
