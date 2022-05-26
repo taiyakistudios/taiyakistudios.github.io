@@ -1,3 +1,5 @@
+gsap.set(".bg--desktop .el", { scale: 0 });
+
 gsap.timeline()
   .to("body", { overflow: "hidden" })
   .from(
@@ -45,6 +47,17 @@ gsap.timeline()
       delay: 1,
     },
     0.8
+  )
+  .to(
+    ".bg--desktop .el", 
+    0.6,
+    {
+      scale: 1,
+      ease: Expo.easeInOut,
+      delay: 1,
+      stagger: 0.4,
+    },
+    1
   )
   .from(
     ".footer", 

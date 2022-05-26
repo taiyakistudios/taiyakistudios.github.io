@@ -270,6 +270,38 @@ body {
   margin-bottom: 20px;
   background: url("/images/bg_mobile.png") no-repeat center bottom / contain;
 }
+.bg .el {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.bg .el--1 {
+  background: #71DBFD;
+  width: 45px;
+  height: 45px;
+  transform: translate(-310px, -5px);
+  transform-origin: center;
+  border-radius: 50px;
+}
+.bg .el--2 {
+  background: #FF000F;
+  width: 95px;
+  height: 95px;
+  transform: translate(0px, -51px);
+  transform-origin: center;
+  border-radius: 30px;
+}
+.bg .el--3 {
+  background: #71DBFD;
+  width: 105px;
+  height: 105px;
+  transform: translate(300px, 42px);
+  transform-origin: center;
+  border-radius: 30px;
+}
 
 @media (min-width: 768px) {
   .header {
